@@ -1,0 +1,358 @@
+/*
+<!-- 
+*****************************************************************************
+Title: Contact
+Use: Contact Business
+Author: Joe Joseph
+School/Term: Southern Illinois University, Fall, 2021
+Developed: Oct 24, 2021  
+Tested: Oct 24, 2021 ; Passed on Firefox and Chrome browsers.
+******************************************************************************
+--> */
+/*Margin and Background */
+html {
+    background-color: gainsboro;
+    margin: 10px;
+}
+
+/* font and width */
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%; /* Changed from 725px */
+    max-width: 1024px; /* Max Width */
+
+}
+
+/* Border around image */
+
+
+/* Flex */
+header img {
+    
+    width: 100%;
+    max-width: 12%;
+    height: auto;
+    float: right;
+    border: 1px solid blue;
+    border-radius: 5px 5px 5px 5px;
+
+    
+    
+
+}
+
+/* Flex */
+aside img {
+    position: relative; 
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+
+}
+
+
+/* Flex */
+article img {
+        position: relative; 
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 320px;
+
+}
+
+
+
+
+/*
+header img { float: right;
+    border: 5px solid blue;
+    border-radius: 5px 5px 5px 5px;
+} */
+
+
+p3 {
+    font-size: 70%;
+}
+
+/* Table Formatting */
+table {
+
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* Table services and Details formatting */
+
+th:first-child {vertical-align: bottom;}
+th:nth-child(2) {text-align: center;}
+tr:nth-child(2) th {text-align: right;}
+
+td, th {
+    border: 1px solid black;
+    padding: .1em .5em;
+    text-align: right;
+
+}
+
+th.left, td.left {
+    text-align: left;
+}
+
+thead {
+    background-color: rgb(0, 195, 255);
+}
+
+/* main Column */
+main {
+    display: flex;
+    font-size: 80%;
+
+
+}
+
+/*sales page settings */
+
+#sales {
+    flex-basis: 40%;
+    margin: 1.5em;
+}
+
+article {
+    
+    flex-basis: 60%;
+    margin: 1.5em;
+}
+aside {
+    flex-basis: 40%;
+    border-left: 1px solid black;
+    background-color: skyblue;
+    max-height: 32%;
+    max-width: 32.89%;
+
+    /* width: 32.89%; Previouls 224px */
+
+    
+}
+/* Font size main */
+/*
+main p1{
+    font-size: 80%;
+}
+
+*/
+/* Styles for the sidebar */
+
+header h3 {
+    text-align: center;
+}
+
+h7 {
+    font-weight: bold;
+}
+
+
+/* Padding for headings */
+h1, h2, h3{
+
+    padding: 1.37%; /* Previously 10px */
+}
+
+p {
+    padding-left: .68%; /* Previously 5px */
+    padding-right: .68%; /* Previously 5px */
+}
+
+li {
+    padding-left: 1.37%; /* Previously 10px */
+}
+/* address font */
+address {
+    font-size: 80%;
+}
+
+/* Contact Form CSS Formatting */
+
+fieldset {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding-top: .5em;
+}
+
+legend {
+    color: black;
+    font-weight: bold;
+    font-size: 90%;
+    margin-bottom: .5em;
+}
+
+label, input, select {
+    font-size: 85%;
+}
+
+label {
+    float: left;
+    width: 12em;
+    text-align: right;
+}
+
+input, select {
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
+
+
+
+input:required, input[required] {
+    border: 3px solid red; /* Red border around required fields */
+}
+
+input:valid {
+    border: 1px solid black;
+
+}
+
+input:invalid {
+    box-shadow: none;
+}
+
+br {
+    clear: both;
+}
+
+#buttons input {
+    width: 10em; /* Button style */
+}
+
+textarea {
+    height: 5em;
+    width: 25em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+#nav_menu ul {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    list-style: none;
+    padding: 1em; /* padding above and below li elements */
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black; }
+
+#nav_menu ul li {
+    flex-basis: 20%;
+    padding: 0 1.5em;
+}
+
+#nav_menu ul li a {
+    font-weight: bold;
+    color: blue;
+
+}
+
+/* Hide Mobile Menu */
+
+#mobile_menu { display: none;}
+
+
+/* Tablet Portarait to standard 960px */
+
+
+@media only screen and (max-width: 960px)
+ {
+    #nav_menu {display: none;}
+    
+}
+
+/* Mobile landscape to Tablet portrait */
+
+@media only screen and (max-width: 767px)
+    {
+    #nav_menu {display: none;}
+
+    #mobile_menu { display: block; }
+    
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main {
+        flex-direction: column;
+    }
+    article {
+        order: 1;
+    }
+    aside {
+        order: 2;
+        margin: 0;
+    } /* Table mobile block */
+    th, td {
+        display: block;
+    }
+    
+     thead {
+        display: none;
+    }
+    tr td:first-child {
+        font-weight: bold;
+        font-size: 110%;
+        background-color: aqua;
+        
+    }
+    
+    tbody td {
+        border-bottom-style: none;
+    }
+
+
+}
+
+    
+
+/* Mobile Portrait to Mobile Landscape */
+
+@media only screen and (max-width: 479px)
+ {
+    #nav_menu {display: none;}
+    #mobile_menu { 
+    
+        display: block; 
+    }
+
+
+ th, td {
+    display: block;
+}
+
+ thead {
+    display: none;
+}
+tr td:first-child {
+    font-weight: bold;
+    font-size: 110%;
+    background-color: aqua;
+    
+}
+
+tbody td {
+    border-bottom-style: none;
+}
+
+
+
+}
+

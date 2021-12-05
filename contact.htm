@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- 
+*****************************************************************************
+Title: Contact
+Use: Contact
+Author: Joe Joseph
+School/Term: Southern Illinois University, Fall, 2021
+Developed: Dec 5, 2021  
+Tested: Dec 5, 2021; Passed on Firefox and Chrome browsers.
+******************************************************************************
+-->
+
+<html lang="en-US">
+<head>
+        <meta charset="utf-8">
+        <title>Wargames!</title>
+        <link rel="Shortcut Icon" href="fav.png">
+        <link rel="stylesheet" type = "text/css" href="main.css">
+        <link rel="stylesheet" types = "text/css" href="slicknav.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="jquery.slicknav.js"></script> 
+        <link rel="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+        <script>
+                $(document).ready(function(){
+                    $('#nav_menu').slicknav({prependTo: "#mobile_menu"});
+                });
+        </script>
+            
+
+</head>
+
+<body>
+        <header>
+                <img src="tank2.JPG" alt="Tank" height="50">
+
+                <h1>Wargame News</h1>
+        </header>
+        <nav id="mobile_menu"></nav>
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="reviews.htm">Reviews</a></li>
+                <li><a href="afteraction.htm">PC/Tabletop</a></li>
+                <li><a href="aboutus.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact</a></li>
+                </ul>
+        </nav>
+        
+        <form action="response.htm" method="get" id="registration_form" target="response.htm">
+
+            <fieldset>
+                    <legend>Registration Information</legend>
+                    <label for="email">E-Mail:</label>
+                    <input type="email" name="email" id="email" autofocus required placeholder="Email address"><br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required
+                            placeholder="At least 6 letters or numbers"
+                            pattern="{a-zA-Z0-9}{6,}"
+                            title="Must be at least 6 alphanumeric characters"><br>
+                    <label for="verify">Verify Password:</label>
+                    <input type="password" name="verify" id="verify" placeholder="Must be at least 6 alphanumeric characters" required><br>
+            </fieldset>
+            <fieldset>
+                    <legend>Biker Information</legend>
+                    <label for="full_name">Full Name:</label>
+                    <input type="text" name="full_name" id="full_name" minlength="15" maxlength="25" required
+                    placeholder="Please enter your Full Name"><br>
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address" minlength="15" maxlength="50" required
+                    placeholder="Please enter your address"><br>
+                    <label for="city">City:</label>
+                    <input type="text" name="city" id="city" minlength="4" maxlength="25" required
+                    placeholder="Please enter your Cite"
+                    title="Minimum 4 charaters, Maximum 25"><br>
+                    <label for="state">State:</label>
+                    <select name="state" id="state" required>
+                            <option value="c">California</option>
+                            <option value="a">Alabama</option>
+                            <option value="i">Idaho</option>
+                            <option value="f">Florida</option>
+                            <option value="n">New York</option>
+                            <option value="t">Texas</option>
+                    </select><br>
+                    <label for="zip">ZIP Code:</label>
+                    <input type="text" name="zip" id="zip" minlength="5" maxlength="10" required
+                    placeholder="99999 or 99999-9999"
+                    pattern="\d{5}([\-]\d{4})?" title="Either 99999 or 99999-9999"><br>
+            
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" name="phone" id="phone" minlength="10" maxlength="12" required
+                    placeholder="999-999-9999"
+                    pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-9999 format"><br>
+            
+            </fieldset>
+            <fieldset>
+                    <legend>Inquiry Type</legend>
+                    <input type="checkbox" name="inquiry_type1" id="inquiry_type1" value="sales1" required>
+                    <label for="inquiry_type1">Sales</label><br>
+                    
+                    <input type="checkbox" name="inquiry_type2" id="inquiry_type2" value="sales2" required>
+                    <label for="inquiry_type2">Service</label><br>
+            
+                    <input type="checkbox" name="inquiry_type3" id="inquiry_type3" value="sales3" required>
+                    <label for="inquiry_type3">Rentals</label><br>
+                    
+            
+            </fieldset>
+            <fieldset>
+                    <legend>Bicycle Type</legend>
+                    <input type="radio" name="bike_type" id="bike_type1" value="ALR4" required>
+                    <label for="bike_type1">Checkpoint ALR 4</label><br>
+            
+                    <input type="radio" name="bike_type" id="bike_type2" value="AL2" required>
+                    <label for="bike_type2">Domane AL 2 Disc</label><br>
+            
+                    <input type="radio" name="bike_type" id="bike_type3" value="R6" required>
+                    <label for="bike_type3">Roscoe 6</label><br>
+            
+                    <input type="radio" name="bike_type" id="bike_type4" value="R7" required>
+                    <label for="bike_type4">Roscoe 7</label><br>
+            
+            </fieldset>
+            
+            <fieldset>
+                    <legend>Message</legend>
+                    <textarea id="message"
+                    placeholder="Please leave a message" 
+                    title="Minimum 20 characters, Maximum 200" minlength="20" maxlength="200" required>
+                    </textarea><br>
+                    <label for="submission_date">Submisson Date:</label>
+                    <input type="date" name="submission_date" id="submission_date" required><br>
+            
+            </fieldset>
+            <fieldset id="buttons">
+                    <legend>Submit</legend>
+                    <label>&nbsp;</label>
+                    <input type="submit" id="submit" value="Submit">
+                    <input type="reset" id="reset" value="Reset Fields"><br>
+            
+            </fieldset>
+            
+            
+            
+            
+            </form>
+            
+            </body>
+            </html>
